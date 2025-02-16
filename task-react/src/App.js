@@ -26,6 +26,14 @@ import UseState7 from './tasks/06.useState/7'
 import UseState8 from './tasks/06.useState/8'
 import UseState9 from './tasks/06.useState/9'
 import UseState10 from './tasks/06.useState/10'
+import UseState11 from './tasks/06.useState/11'
+import UseState12 from './tasks/06.useState/12'
+import UseState13 from './tasks/06.useState/13'
+import UseState14 from './tasks/06.useState/14'
+import UseEffect1 from './tasks/07.useEffect/1'
+import UseEffect2 from './tasks/07.useEffect/2'
+import UseEffect3 from './tasks/07.useEffect/3'
+import UseEffect4 from './tasks/07.useEffect/4'
 
 function App() {
   return (
@@ -56,6 +64,14 @@ function App() {
       <Route path='/usestate/8' element={<UseState8></UseState8>}></Route>
       <Route path='/usestate/9' element={<UseState9></UseState9>}></Route>
       <Route path='/usestate/10' element={<UseState10></UseState10>}></Route>
+      <Route path='/usestate/11' element={<UseState11></UseState11>}></Route>
+      <Route path='/usestate/12' element={<UseState12></UseState12>}></Route>
+      <Route path='/usestate/13' element={<UseState13></UseState13>}></Route>
+      <Route path='/usestate/14' element={<UseState14></UseState14>}></Route>
+      <Route path='/useeffect/1' element={<UseEffect1></UseEffect1>}></Route>
+      <Route path='/useeffect/2' element={<UseEffect2></UseEffect2>}></Route>
+      <Route path='/useeffect/3' element={<UseEffect3></UseEffect3>}></Route>
+      <Route path='/useeffect/4' element={<UseEffect4></UseEffect4>}></Route>
     </Routes>
   );
 }
