@@ -30,10 +30,22 @@ import UseState11 from './tasks/06.useState/11'
 import UseState12 from './tasks/06.useState/12'
 import UseState13 from './tasks/06.useState/13'
 import UseState14 from './tasks/06.useState/14'
+import UseState15 from './tasks/06.useState/15'
+import UseState16 from './tasks/06.useState/16'
+import UseState17 from './tasks/06.useState/17'
+import UseState18 from './tasks/06.useState/18'
+import UseState19 from './tasks/06.useState/19'
 import UseEffect1 from './tasks/07.useEffect/1'
 import UseEffect2 from './tasks/07.useEffect/2'
 import UseEffect3 from './tasks/07.useEffect/3'
 import UseEffect4 from './tasks/07.useEffect/4'
+import UseEffect5 from './tasks/07.useEffect/5'
+import UseRef1 from './tasks/08.useRef/1'
+import UseRef2 from './tasks/08.useRef/2'
+import UseRef3 from './tasks/08.useRef/3'
+import UseRef4 from './tasks/08.useRef/4'
+import UseRef5 from './tasks/08.useRef/5'
+import UseRef6 from './tasks/08.useRef/6'
 
 function App() {
   return (
@@ -68,10 +80,22 @@ function App() {
       <Route path='/usestate/12' element={<UseState12></UseState12>}></Route>
       <Route path='/usestate/13' element={<UseState13></UseState13>}></Route>
       <Route path='/usestate/14' element={<UseState14></UseState14>}></Route>
+      <Route path='/usestate/15' element={<UseState15></UseState15>}></Route>
+      <Route path='/usestate/16' element={<UseState16></UseState16>}></Route>
+      <Route path='/usestate/17' element={<UseState17></UseState17>}></Route>
+      <Route path='/usestate/18' element={<UseState18></UseState18>}></Route>
+      <Route path='/usestate/19' element={<UseState19></UseState19>}></Route>
       <Route path='/useeffect/1' element={<UseEffect1></UseEffect1>}></Route>
       <Route path='/useeffect/2' element={<UseEffect2></UseEffect2>}></Route>
       <Route path='/useeffect/3' element={<UseEffect3></UseEffect3>}></Route>
       <Route path='/useeffect/4' element={<UseEffect4></UseEffect4>}></Route>
+      <Route path='/useeffect/5' element={<UseEffect5></UseEffect5>}></Route>
+      <Route path='/useref/1' element={<UseRef1></UseRef1>}></Route>
+      <Route path='/useref/2' element={<UseRef2></UseRef2>}></Route>
+      <Route path='/useref/3' element={<UseRef3></UseRef3>}></Route>
+      <Route path='/useref/4' element={<UseRef4></UseRef4>}></Route>
+      <Route path='/useref/5' element={<UseRef5></UseRef5>}></Route>
+      <Route path='/useref/6' element={<UseRef6></UseRef6>}></Route>
     </Routes>
   );
 }

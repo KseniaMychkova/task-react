@@ -11,10 +11,6 @@ function UseState10 (){
            ...prevForm, name:e.target.value
         }))
     }
-    // function saveInp2 (e){
-    //     setForm.name(e.target.value)
-    //     })
-    // }
     function saveInp2 (e){
         setForm(prevForm => ({ 
            ...prevForm, surname:e.target.value

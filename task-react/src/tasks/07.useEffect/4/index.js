@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 
 function UseEffect3() {
 const [time, setTime] = useState('')
