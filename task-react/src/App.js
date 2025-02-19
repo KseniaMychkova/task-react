@@ -46,6 +46,12 @@ import UseRef3 from './tasks/08.useRef/3'
 import UseRef4 from './tasks/08.useRef/4'
 import UseRef5 from './tasks/08.useRef/5'
 import UseRef6 from './tasks/08.useRef/6'
+import UseMemo1 from './tasks/09.useMemo/1'
+import UseMemo2 from './tasks/09.useMemo/2'
+import UseMemo3 from './tasks/09.useMemo/3'
+import UseMemo4 from './tasks/09.useMemo/4';
+import UseMemo5 from './tasks/09.useMemo/5';
+
 
 function App() {
   return (
@@ -96,6 +102,12 @@ function App() {
       <Route path='/useref/4' element={<UseRef4></UseRef4>}></Route>
       <Route path='/useref/5' element={<UseRef5></UseRef5>}></Route>
       <Route path='/useref/6' element={<UseRef6></UseRef6>}></Route>
+      <Route path='/usememo/1' element={<UseMemo1></UseMemo1>}></Route>
+      <Route path='/usememo/2' element={<UseMemo2></UseMemo2>}></Route>
+      <Route path='/usememo/3' element={<UseMemo3></UseMemo3>}></Route>
+      <Route path='/usememo/4' element={<UseMemo4/>}></Route>
+      <Route path='/usememo/5' element={<UseMemo5/>}></Route>
+
     </Routes>
   );
 }
