@@ -51,6 +51,11 @@ import UseMemo2 from './tasks/09.useMemo/2'
 import UseMemo3 from './tasks/09.useMemo/3'
 import UseMemo4 from './tasks/09.useMemo/4';
 import UseMemo5 from './tasks/09.useMemo/5';
+import UseCallback1 from './tasks/10.useCallback/1';
+import UseCallback2 from './tasks/10.useCallback/2';
+import UseCallback3 from './tasks/10.useCallback/3';
+import UseCallback4 from './tasks/10.useCallback/4';
+import UseCallback5 from './tasks/10.useCallback/5';
 
 
 function App() {
@@ -107,6 +112,11 @@ function App() {
       <Route path='/usememo/3' element={<UseMemo3></UseMemo3>}></Route>
       <Route path='/usememo/4' element={<UseMemo4/>}></Route>
       <Route path='/usememo/5' element={<UseMemo5/>}></Route>
+      <Route path='/usecallback/1' element={<UseCallback1/>}></Route>
+      <Route path='/usecallback/2' element={<UseCallback2/>}></Route>
+      <Route path='/usecallback/3' element={<UseCallback3/>}></Route>
+      <Route path='/usecallback/4' element={<UseCallback4/>}></Route>
+      <Route path='/usecallback/5' element={<UseCallback5/>}></Route>
 
     </Routes>
   );
