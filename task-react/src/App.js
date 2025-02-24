@@ -56,69 +56,101 @@ import UseCallback2 from './tasks/10.useCallback/2';
 import UseCallback3 from './tasks/10.useCallback/3';
 import UseCallback4 from './tasks/10.useCallback/4';
 import UseCallback5 from './tasks/10.useCallback/5';
+import UseContext1 from './tasks/11.useContext/1';
+import UseContext2 from './tasks/11.useContext/2';
+import UseContext3 from './tasks/11.useContext/3';
+import UseContext4 from './tasks/11.useContext/4';
+import { Task1, Task2, Task3, Task4 } from './Context';
+import { useState } from 'react'
 
 
 function App() {
-  return (
-    <Routes>
-      <Route path='/jsx/1' element={<JSX1></JSX1>}></Route>
-      <Route path='/jsx/2' element={<JSX2></JSX2>}></Route>
-      <Route path='/jsx/3' element={<JSX3></JSX3>}></Route>
-      <Route path='/jsx/4' element={<JSX4></JSX4>}></Route>
-      <Route path='/jsx/5' element={<JSX5></JSX5>}></Route>
-      <Route path='/jsx/6' element={<JSX6></JSX6>}></Route>
-      <Route path='/jsx/7' element={<JSX7></JSX7>}></Route>
-      <Route path='/jsx/8' element={<JSX8></JSX8>}></Route>
-      <Route path='/jsx/9' element={<JSX9></JSX9>}></Route>
-      <Route path='/jsx/10' element={<JSX10></JSX10>}></Route>
-      <Route path='/event/1' element={<Event1></Event1>}></Route>
-      <Route path='/event/2' element={<Event2></Event2>}></Route>
-      <Route path='/event/3' element={<Event3></Event3>}></Route>
-      <Route path='/event/4' element={<Event4></Event4>}></Route>
-      <Route path='/event/5' element={<Event5></Event5>}></Route>
-      <Route path='/event/6' element={<Event6></Event6>}></Route>
-      <Route path='/usestate/1' element={<UseState1></UseState1>}></Route>
-      <Route path='/usestate/2' element={<UseState2></UseState2>}></Route>
-      <Route path='/usestate/3' element={<UseState3></UseState3>}></Route>
-      <Route path='/usestate/4' element={<UseState4></UseState4>}></Route>
-      <Route path='/usestate/5' element={<UseState5></UseState5>}></Route>
-      <Route path='/usestate/6' element={<UseState6></UseState6>}></Route>
-      <Route path='/usestate/7' element={<UseState7></UseState7>}></Route>
-      <Route path='/usestate/8' element={<UseState8></UseState8>}></Route>
-      <Route path='/usestate/9' element={<UseState9></UseState9>}></Route>
-      <Route path='/usestate/10' element={<UseState10></UseState10>}></Route>
-      <Route path='/usestate/11' element={<UseState11></UseState11>}></Route>
-      <Route path='/usestate/12' element={<UseState12></UseState12>}></Route>
-      <Route path='/usestate/13' element={<UseState13></UseState13>}></Route>
-      <Route path='/usestate/14' element={<UseState14></UseState14>}></Route>
-      <Route path='/usestate/15' element={<UseState15></UseState15>}></Route>
-      <Route path='/usestate/16' element={<UseState16></UseState16>}></Route>
-      <Route path='/usestate/17' element={<UseState17></UseState17>}></Route>
-      <Route path='/usestate/18' element={<UseState18></UseState18>}></Route>
-      <Route path='/usestate/19' element={<UseState19></UseState19>}></Route>
-      <Route path='/useeffect/1' element={<UseEffect1></UseEffect1>}></Route>
-      <Route path='/useeffect/2' element={<UseEffect2></UseEffect2>}></Route>
-      <Route path='/useeffect/3' element={<UseEffect3></UseEffect3>}></Route>
-      <Route path='/useeffect/4' element={<UseEffect4></UseEffect4>}></Route>
-      <Route path='/useeffect/5' element={<UseEffect5></UseEffect5>}></Route>
-      <Route path='/useref/1' element={<UseRef1></UseRef1>}></Route>
-      <Route path='/useref/2' element={<UseRef2></UseRef2>}></Route>
-      <Route path='/useref/3' element={<UseRef3></UseRef3>}></Route>
-      <Route path='/useref/4' element={<UseRef4></UseRef4>}></Route>
-      <Route path='/useref/5' element={<UseRef5></UseRef5>}></Route>
-      <Route path='/useref/6' element={<UseRef6></UseRef6>}></Route>
-      <Route path='/usememo/1' element={<UseMemo1></UseMemo1>}></Route>
-      <Route path='/usememo/2' element={<UseMemo2></UseMemo2>}></Route>
-      <Route path='/usememo/3' element={<UseMemo3></UseMemo3>}></Route>
-      <Route path='/usememo/4' element={<UseMemo4/>}></Route>
-      <Route path='/usememo/5' element={<UseMemo5/>}></Route>
-      <Route path='/usecallback/1' element={<UseCallback1/>}></Route>
-      <Route path='/usecallback/2' element={<UseCallback2/>}></Route>
-      <Route path='/usecallback/3' element={<UseCallback3/>}></Route>
-      <Route path='/usecallback/4' element={<UseCallback4/>}></Route>
-      <Route path='/usecallback/5' element={<UseCallback5/>}></Route>
+  const [saveLang, setSaveLang] = useState('ru')
+  const [colorTheme, setColorTheme] = useState('light')
 
-    </Routes>
+  return (
+    <div>
+      <Routes>
+        <Route path='/jsx/1' element={<JSX1></JSX1>}></Route>
+        <Route path='/jsx/2' element={<JSX2></JSX2>}></Route>
+        <Route path='/jsx/3' element={<JSX3></JSX3>}></Route>
+        <Route path='/jsx/4' element={<JSX4></JSX4>}></Route>
+        <Route path='/jsx/5' element={<JSX5></JSX5>}></Route>
+        <Route path='/jsx/6' element={<JSX6></JSX6>}></Route>
+        <Route path='/jsx/7' element={<JSX7></JSX7>}></Route>
+        <Route path='/jsx/8' element={<JSX8></JSX8>}></Route>
+        <Route path='/jsx/9' element={<JSX9></JSX9>}></Route>
+        <Route path='/jsx/10' element={<JSX10></JSX10>}></Route>
+        <Route path='/event/1' element={<Event1></Event1>}></Route>
+        <Route path='/event/2' element={<Event2></Event2>}></Route>
+        <Route path='/event/3' element={<Event3></Event3>}></Route>
+        <Route path='/event/4' element={<Event4></Event4>}></Route>
+        <Route path='/event/5' element={<Event5></Event5>}></Route>
+        <Route path='/event/6' element={<Event6></Event6>}></Route>
+        <Route path='/usestate/1' element={<UseState1></UseState1>}></Route>
+        <Route path='/usestate/2' element={<UseState2></UseState2>}></Route>
+        <Route path='/usestate/3' element={<UseState3></UseState3>}></Route>
+        <Route path='/usestate/4' element={<UseState4></UseState4>}></Route>
+        <Route path='/usestate/5' element={<UseState5></UseState5>}></Route>
+        <Route path='/usestate/6' element={<UseState6></UseState6>}></Route>
+        <Route path='/usestate/7' element={<UseState7></UseState7>}></Route>
+        <Route path='/usestate/8' element={<UseState8></UseState8>}></Route>
+        <Route path='/usestate/9' element={<UseState9></UseState9>}></Route>
+        <Route path='/usestate/10' element={<UseState10></UseState10>}></Route>
+        <Route path='/usestate/11' element={<UseState11></UseState11>}></Route>
+        <Route path='/usestate/12' element={<UseState12></UseState12>}></Route>
+        <Route path='/usestate/13' element={<UseState13></UseState13>}></Route>
+        <Route path='/usestate/14' element={<UseState14></UseState14>}></Route>
+        <Route path='/usestate/15' element={<UseState15></UseState15>}></Route>
+        <Route path='/usestate/16' element={<UseState16></UseState16>}></Route>
+        <Route path='/usestate/17' element={<UseState17></UseState17>}></Route>
+        <Route path='/usestate/18' element={<UseState18></UseState18>}></Route>
+        <Route path='/usestate/19' element={<UseState19></UseState19>}></Route>
+        <Route path='/useeffect/1' element={<UseEffect1></UseEffect1>}></Route>
+        <Route path='/useeffect/2' element={<UseEffect2></UseEffect2>}></Route>
+        <Route path='/useeffect/3' element={<UseEffect3></UseEffect3>}></Route>
+        <Route path='/useeffect/4' element={<UseEffect4></UseEffect4>}></Route>
+        <Route path='/useeffect/5' element={<UseEffect5></UseEffect5>}></Route>
+        <Route path='/useref/1' element={<UseRef1></UseRef1>}></Route>
+        <Route path='/useref/2' element={<UseRef2></UseRef2>}></Route>
+        <Route path='/useref/3' element={<UseRef3></UseRef3>}></Route>
+        <Route path='/useref/4' element={<UseRef4></UseRef4>}></Route>
+        <Route path='/useref/5' element={<UseRef5></UseRef5>}></Route>
+        <Route path='/useref/6' element={<UseRef6></UseRef6>}></Route>
+        <Route path='/usememo/1' element={<UseMemo1></UseMemo1>}></Route>
+        <Route path='/usememo/2' element={<UseMemo2></UseMemo2>}></Route>
+        <Route path='/usememo/3' element={<UseMemo3></UseMemo3>}></Route>
+        <Route path='/usememo/4' element={<UseMemo4 />}></Route>
+        <Route path='/usememo/5' element={<UseMemo5 />}></Route>
+        <Route path='/usecallback/1' element={<UseCallback1 />}></Route>
+        <Route path='/usecallback/2' element={<UseCallback2 />}></Route>
+        <Route path='/usecallback/3' element={<UseCallback3 />}></Route>
+        <Route path='/usecallback/4' element={<UseCallback4 />}></Route>
+        <Route path='/usecallback/5' element={<UseCallback5 />}></Route>
+
+      </Routes>
+      <Task1.Provider value={{ id: 1, name: 'hanna' }}>
+        <Routes>
+          <Route path='/usecontext/1' element={<UseContext1 />}></Route>
+        </Routes>
+      </Task1.Provider>
+
+      <Task2.Provider value={{ language: saveLang, change: setSaveLang }}>
+        <Routes>
+          <Route path='/usecontext/2' element={<UseContext2 />}></Route>
+        </Routes>
+      </Task2.Provider>
+      <Task3.Provider value={{temp: '-5', wet: '65%', wind: '4км.ч'}}>
+        <Routes>
+          <Route path='/usecontext/3' element={<UseContext3 />}></Route>
+        </Routes>
+      </Task3.Provider>
+    <Task4.Provider value= {{theme: colorTheme, changeColor: setColorTheme}}>
+      <Routes>
+      <Route path='/usecontext/4' element={<UseContext4 />}></Route>
+      </Routes>
+    </Task4.Provider>
+    </div>
   );
 }
 
