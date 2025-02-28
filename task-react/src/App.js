@@ -60,13 +60,25 @@ import UseContext1 from './tasks/11.useContext/1';
 import UseContext2 from './tasks/11.useContext/2';
 import UseContext3 from './tasks/11.useContext/3';
 import UseContext4 from './tasks/11.useContext/4';
-import { Task1, Task2, Task3, Task4 } from './Context';
+import { Task1, Task2, Task3, Task4, RepeatTasks_Task5 } from './Context';
 import { useState } from 'react'
+import UseReducer1 from './tasks/12.useReducer/1';
+import UseReducer2 from './tasks/12.useReducer/2';
+import UseReducer3 from './tasks/12.useReducer/3';
+import UseReducer4 from './tasks/12.useReducer/4';
+import UseReducer5 from './tasks/12.useReducer/5';
+import RepeatTasks1 from './tasks/13.repeatTasks/1';
+import RepeatTasks2 from './tasks/13.repeatTasks/2';
+import RepeatTasks3 from './tasks/13.repeatTasks/3';
+import RepeatTasks4 from './tasks/13.repeatTasks/4';
+import RepeatTasks5 from './tasks/13.repeatTasks/5';
+import RepeatTasks6 from './tasks/13.repeatTasks/6';
 
 
 function App() {
   const [saveLang, setSaveLang] = useState('ru')
   const [colorTheme, setColorTheme] = useState('light')
+  const [langForRepeat, setLangForRepeat] = useState('ru')
 
   return (
     <div>
@@ -127,7 +139,17 @@ function App() {
         <Route path='/usecallback/3' element={<UseCallback3 />}></Route>
         <Route path='/usecallback/4' element={<UseCallback4 />}></Route>
         <Route path='/usecallback/5' element={<UseCallback5 />}></Route>
-
+        <Route path='/usereducer/1' element={<UseReducer1 />}></Route>
+        <Route path='/usereducer/2' element={<UseReducer2 />}></Route>
+        <Route path='/usereducer/3' element={<UseReducer3 />}></Route>
+        <Route path='/usereducer/4' element={<UseReducer4 />}></Route>
+        <Route path='/usereducer/5' element={<UseReducer5 />}></Route>
+        <Route path='/repeattasks/1' element={<RepeatTasks1 />}></Route>
+        <Route path='/repeattasks/2' element={<RepeatTasks2 />}></Route>
+        <Route path='/repeattasks/3' element={<RepeatTasks3 />}></Route>
+        <Route path='/repeattasks/4' element={<RepeatTasks4 />}></Route>
+        {/* <Route path='/repeattasks/5' element={<RepeatTasks5 />}></Route> */}
+        <Route path='/repeattasks/6' element={<RepeatTasks6 />}></Route>
       </Routes>
       <Task1.Provider value={{ id: 1, name: 'hanna' }}>
         <Routes>
@@ -140,16 +162,23 @@ function App() {
           <Route path='/usecontext/2' element={<UseContext2 />}></Route>
         </Routes>
       </Task2.Provider>
-      <Task3.Provider value={{temp: '-5', wet: '65%', wind: '4км.ч'}}>
+      <Task3.Provider value={{ temp: '-5', wet: '65%', wind: '4км.ч' }}>
         <Routes>
           <Route path='/usecontext/3' element={<UseContext3 />}></Route>
         </Routes>
       </Task3.Provider>
-    <Task4.Provider value= {{theme: colorTheme, changeColor: setColorTheme}}>
-      <Routes>
-      <Route path='/usecontext/4' element={<UseContext4 />}></Route>
-      </Routes>
-    </Task4.Provider>
+      <Task4.Provider value={{ theme: colorTheme, changeColor: setColorTheme }}>
+        <Routes>
+          <Route path='/usecontext/4' element={<UseContext4 />}></Route>
+        </Routes>
+      </Task4.Provider>
+      <RepeatTasks_Task5.Provider value={{language: langForRepeat, change: setLangForRepeat}}>
+        <Routes>
+          <Route path='/repeattasks/5' element={<RepeatTasks5 />}></Route>
+        </Routes>
+      </RepeatTasks_Task5.Provider>
+
+
     </div>
   );
 }
