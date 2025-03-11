@@ -60,25 +60,42 @@ import UseContext1 from './tasks/11.useContext/1';
 import UseContext2 from './tasks/11.useContext/2';
 import UseContext3 from './tasks/11.useContext/3';
 import UseContext4 from './tasks/11.useContext/4';
-import { Task1, Task2, Task3, Task4, RepeatTasks_Task5 } from './Context';
+import UseContext5 from './tasks/11.useContext/5';
+import UseContext6 from './tasks/11.useContext/6';
+import UseContext7 from './tasks/11.useContext/7';
+import UseContext8 from './tasks/11.useContext/8';
+import { Task1, Task2, Task3, Task4, RepeatTasks_Task5, UseContext5_1, UseContext_ChangeTheme, CartContext, AuthContext, NotificationContext } from './Context';
 import { useState } from 'react'
 import UseReducer1 from './tasks/12.useReducer/1';
 import UseReducer2 from './tasks/12.useReducer/2';
 import UseReducer3 from './tasks/12.useReducer/3';
 import UseReducer4 from './tasks/12.useReducer/4';
 import UseReducer5 from './tasks/12.useReducer/5';
+import UseReducer6 from './tasks/12.useReducer/6';
+import UseReducer7 from './tasks/12.useReducer/7';
+import UseReducer8 from './tasks/12.useReducer/8';
+import UseReducer9 from './tasks/12.useReducer/9';
+import UseReducer10 from './tasks/12.useReducer/10';
 import RepeatTasks1 from './tasks/13.repeatTasks/1';
 import RepeatTasks2 from './tasks/13.repeatTasks/2';
 import RepeatTasks3 from './tasks/13.repeatTasks/3';
 import RepeatTasks4 from './tasks/13.repeatTasks/4';
 import RepeatTasks5 from './tasks/13.repeatTasks/5';
 import RepeatTasks6 from './tasks/13.repeatTasks/6';
+import UserProfile from './tasks/11.useContext/8/Components/UserProfile';
+import LoginForm from './tasks/11.useContext/8/Components/LoginForm';
+import UseContext9 from './tasks/11.useContext/9'
+
 
 
 function App() {
   const [saveLang, setSaveLang] = useState('ru')
   const [colorTheme, setColorTheme] = useState('light')
   const [langForRepeat, setLangForRepeat] = useState('ru')
+  const [theme, setTheme] = useState('light')
+  const [products, setProducts] = useState(['масло', 'огурец', 'рыбы', 'курица', 'хлеб'])
+  const [user, setUser] = useState({ username: null })
+  const [message, setMessage] = useState('')
 
   return (
     <div>
@@ -144,12 +161,17 @@ function App() {
         <Route path='/usereducer/3' element={<UseReducer3 />}></Route>
         <Route path='/usereducer/4' element={<UseReducer4 />}></Route>
         <Route path='/usereducer/5' element={<UseReducer5 />}></Route>
+        <Route path='/usereducer/6' element={<UseReducer6 />}></Route>
+        <Route path='/usereducer/7' element={<UseReducer7 />}></Route>
+        <Route path='/usereducer/8' element={<UseReducer8 />}></Route>
+        <Route path='/usereducer/9' element={<UseReducer9 />}></Route>
+        <Route path='/usereducer/10' element={<UseReducer10 />}></Route>
         <Route path='/repeattasks/1' element={<RepeatTasks1 />}></Route>
         <Route path='/repeattasks/2' element={<RepeatTasks2 />}></Route>
         <Route path='/repeattasks/3' element={<RepeatTasks3 />}></Route>
         <Route path='/repeattasks/4' element={<RepeatTasks4 />}></Route>
-        {/* <Route path='/repeattasks/5' element={<RepeatTasks5 />}></Route> */}
         <Route path='/repeattasks/6' element={<RepeatTasks6 />}></Route>
+
       </Routes>
       <Task1.Provider value={{ id: 1, name: 'hanna' }}>
         <Routes>
@@ -172,11 +194,38 @@ function App() {
           <Route path='/usecontext/4' element={<UseContext4 />}></Route>
         </Routes>
       </Task4.Provider>
-      <RepeatTasks_Task5.Provider value={{language: langForRepeat, change: setLangForRepeat}}>
+      <RepeatTasks_Task5.Provider value={{ language: langForRepeat, change: setLangForRepeat }}>
         <Routes>
           <Route path='/repeattasks/5' element={<RepeatTasks5 />}></Route>
         </Routes>
       </RepeatTasks_Task5.Provider>
+      <UseContext5_1.Provider value={{ id: 1, name: 'hanna' }}>
+        <Routes>
+          <Route path='usecontext/5' element={<UseContext5 />}></Route>
+        </Routes>
+      </UseContext5_1.Provider>
+      <UseContext_ChangeTheme.Provider value={{ theme: theme, change: setTheme }}>
+        <Routes>
+          <Route path='usecontext/6' element={<UseContext6 />}></Route>
+        </Routes>
+      </UseContext_ChangeTheme.Provider>
+      <CartContext.Provider value={{ list: products, changeList: setProducts }}>
+        <Routes>
+          <Route path='usecontext/7' element={<UseContext7 />}></Route>
+        </Routes>
+      </CartContext.Provider>
+      <AuthContext.Provider value={{ userObj: user, login: setUser, logout: setUser }}>
+        <Routes>
+          <Route path='usecontext/8' element={<UseContext8 />}></Route>
+          <Route path='/usecontext/login' element={<LoginForm />}></Route>
+          <Route path='/usecontext/profile' element={<UserProfile />}></Route>
+        </Routes>
+      </AuthContext.Provider>
+      <NotificationContext.Provider value={{ string: message, changeNotification: setMessage }}>
+        <Routes>
+          <Route path='usecontext/9' element={<UseContext9 />}></Route>
+        </Routes>
+      </NotificationContext.Provider>
 
 
     </div>
